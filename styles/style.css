@@ -11,6 +11,13 @@ body{
     max-width: 1300px;
     margin: 0 auto;
 }
+main{
+    max-width: 1110px;
+    margin: 0 auto;
+}
+section{
+    margin-top: 100px;
+}
 
 /* navbar related style */
 .brand{
@@ -82,9 +89,85 @@ body{
 .banner-button i{
     margin-left:5px;
 }
+/* company name section style */
+.company-name{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding: 40px 0px;
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+    border-image: linear-gradient(to right, transparent, #6c6d6e, transparent) 1;
+}
+/* product section start style */
+.product-main-title{
+    color: #3A3A3A;
+    text-align: center;
+    font-size: 1.75rem; 
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+.product-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+.product-image{
+    width: 100%;
+    object-fit: cover;
+}
+.product-card{
+    box-shadow: 2px 2px 15px rgba(170, 170, 170, 0.4);
+    border-radius: 5px;
+    padding: 17px;
+    
+
+}
+.product-title{
+    font-size: 1.75rem;
+    margin: 16px 0 6px 0;
+    font-weight: 500;
+    line-height: 40px;
+}
+.dolar-title{
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 150%;
+}
+.product-description{
+    margin: 0;
+    color: #787885;
+}
+.star-img{
+    width: 70px;
+}
+.star-text{
+    color: #5E6366;
+}
+.star-box{
+    gap: 5px;
+    align-items: center;
+    margin: -10px 0;
+}
+.product-button{
+    background-color: transparent;
+    border: none;
+    color: rgba(224, 44, 109, 0.87);
+    font-size: 1rem;
+    font-weight: 700;
+    margin-top: 30px;
+    padding: 0 20px;
+    width: 100%;
+    text-align: right;
+}
 
 /* Small device responsive */
 @media screen and (max-width: 576px) {
+    section{
+        margin-top: 50px;
+    }
     .navbar, .nav-links, .banner-section{
         flex-direction: column;
     }
@@ -120,6 +203,19 @@ body{
         justify-content: center;
         padding: 25px;
     }
+    .company-name{
+       border: 0;
+       padding: 0;
+        
+    }
+    .product-main-title{
+        font-size: 1rem;
+    }
+    .product-container{
+    grid-template-columns: repeat(1, 1fr);
+    gap: 30px;
+    margin: 0 20px;
+}
 }
 
 
